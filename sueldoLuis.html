@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sueldo de Luis</title>
+</head>
+<body>
+
+<script>
+
+    // Declarar los sueldo de un empleado y obtener su media, los sueldos se declaran en un array
+
+
+    // ================== FUNCIONES ===========================
+    // Función para calcular la media del sueldo
+
+    function Proceso(tab_sueldo) {
+        suma=0;
+        for(x in tab_sueldo) {
+            if (x > 0) {
+                suma=suma + tab_sueldo[x];
+        }
+        }
+
+        media= suma / tab_sueldo.length;
+        return(media);
+    }
+    
+    function Visualizar(media, tab_sueldo){
+        alert('La media de ' + tab_sueldo [0] + ' es: ' + media );
+    }
+
+    // =============== PROGRAMA PRINCIPAL ===========================
+
+    tab_sueldo= ["Luis", 1000, 2500, 600, 2400];
+
+    result = Proceso (tab_sueldo);
+    Visualizar (result, tab_sueldo);
+
+</script>
+
+</body>
+</html>
+

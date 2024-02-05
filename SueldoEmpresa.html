@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sueldos Empresa</title>
+</head>
+<body>
+
+<script>
+
+    // Guardar en un array los sueldos de varios empleados y sus nombres
+
+
+    // ================== FUNCIONES ===========================
+
+    function Media(tab_sueldo) {
+        suma=0;
+        for(x in tab_sueldo) {
+            if (x > 0) {
+                suma=suma + tab_sueldo[x];
+            }
+        }
+
+        media= suma / (tab_sueldo.length - 1);
+        return(media);
+    }
+    
+    function Visualizar(mat_sueldo, media){
+        for(const x in mat_sueldo){
+            med = Media(mat_sueldo [x]);
+                alert('La media de ' + mat_sueldo [x][0] + ' es: ' + med);
+        
+        }
+    }
+
+    // =============== PROGRAMA PRINCIPAL ===========================
+
+    mat_sueldo= [
+                ["Luis", 1000, 2500, 600, 2400],
+                ["Ana", 1000, 3500, 1600, 4400],
+                ["Pepe", 3000, 4500, 800, 1400],
+                ["Lucia", 2000, 1500, 500, 1400]
+                ];
+
+    Visualizar (mat_sueldo);
+
+</script>
+
+</body>
+</html>

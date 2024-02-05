@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sueldos</title>
+</head>
+<body>
+
+<script>
+
+    // Declarar los sueldo de un empleado y obtener su media, los sueldos se declaran en un array
+
+
+    // ================== FUNCIONES ===========================
+    // Función para calcular la media del sueldo
+
+    function Proceso(Visualizar) {
+        suma=0;
+        for(x in tab_sueldo) {
+            suma=suma + tab_sueldo[x];
+        }
+
+        media= suma / tab_sueldo.length;
+        return(media);
+    }
+    
+    function Visualizar(media){
+        alert('La media de sueldos es: ' + media);
+    }
+
+    // =============== PROGRAMA PRINCIPAL ===========================
+
+    tab_sueldo= [1000, 2500, 600, 2400];
+
+    result = Proceso (tab_sueldo);
+    Visualizar (result);
+
+</script>
+
+</body>
+</html>
+
