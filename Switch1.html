@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buscar número en un array</title>
+</head>
+<body>
+
+<script>
+
+// Declara un array con un numero de valores numericos o nombres, por teclado se
+// pide unos valores y visualizar si se encuentra en el array o no
+
+var tab = [3, 7, 20, 45, 36, 18, 62, 75, 80, 65];
+
+
+    // ================== FUNCIONES ===========================
+
+function Proceso(tab, num) {
+    sw = "no" 
+    for (i = 0; i < tab.length; i++) {
+        if (tab[i] == num) {
+            sw = "si" ;
+        }
+    }
+    return sw;
+}
+    
+
+function Visualizar(dato){
+    if(dato=="si"){
+        alert("si esta dentro")
+    } else {
+        alert("no se encuentra dentro")
+    }
+}
+
+numero=65;
+
+result= Proceso(tab, numero)
+    Visualizar(result);
+
+
+</script>
+</body>
+</html>
+

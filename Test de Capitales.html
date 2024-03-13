@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test de Capitales</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+    /*declarar en json los nombres de las preguntas y las respuestas correspondientes para que sea un tipo test en el que el usuario debe adivinar el capital de cada pais.
+    Visualizar cuantas preguntas ha acertado
+    Visualizar las respuestas no acertadas junto con la respuesta correcta */
+
+var preguntas = [
+    {
+        "pais": "Francia",
+        "opciones": ["Paris", "Londres", "Berlin", "Madrid"],
+        "respuesta": "Paris"
+    },
+    {
+        "pais": "Alemania",
+        "opciones": ["Berlin", "Roma", "Moscú", "Atenas"],
+        "respuesta": "Berlin"
+    },
+    {
+        "pais": "Italia",
+        "opciones": ["Madrid", "Roma", "Lisboa", "Paris"],
+        "respuesta": "Roma"
+    },
+    {
+        "pais": "España",
+        "opciones": ["Atenas", "Madrid", "Londres", "Roma"],
+        "respuesta": "Madrid"
+    }
+];
+
+function mostrarPreguntas() {
+    var aciertos = 0;
+    for (var i = 0; i < preguntas.length; i++) {
+        var pregunta = preguntas[i];
+        var respuestaUsuario = prompt("¿Cual es la capital de " + pregunta.pais + "?" + pregunta.opciones.join(", "));
+        if (respuestaUsuario === pregunta.respuesta) {
+            aciertos++;
+        }
+    }
+    alert("Has acertado " + aciertos + " de " + preguntas.length + " preguntas.");
+}
+
+mostrarPreguntas();
+</script>
+
+</body>
+</html>

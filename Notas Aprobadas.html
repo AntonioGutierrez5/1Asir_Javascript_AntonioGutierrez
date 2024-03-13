@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array bidireccional</title>
+
+  <meta charset="UTF-8">
+</head>
+
+<body>
+ 
+<script>
+    /*2.-) Declarar en un array las diferentes notas de varios alumnos en forma de array bidireccional.Visualizar por cada alumnos cuantas notas aprobadas tiene */
+
+
+var notas = [
+    ['Messi',2, 5, 4], 
+    ['Jese',6, 9, 9],  
+    ['Mariano(GOAT)',4, 9, 1]  
+];
+
+
+    // -------- FUNCIONES -------------
+
+function Aprobadas(notas) {
+    var conta = 0;
+    for (var i = 1; i < notas.length; i++) {
+        if (notas[i] >= 5) {
+            conta++;
+        }
+    }
+    return conta;
+}
+
+
+function Visualizar(notas) {
+    for (var i = 0; i < notas.length; i++) {
+        var notasAprobadas = Aprobadas(notas[i]);
+        alert(notas[i][0]+ " "+ notasAprobadas);
+    }
+}
+
+Visualizar(notas);
+
+</script>
+</body>
+</html>

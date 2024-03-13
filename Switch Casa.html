@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Declarar el mayor numero</title>
+</head>
+<body>
+
+<script>
+
+// Declara un array con un numero de valores numericos que se encuentren valores numeros ascendentes
+
+var tab = [3, 7, 20, 45, 36, 18, 62, 75, 80, 65];
+
+    // ================== FUNCIONES ===========================
+
+function Mayor(tab) {
+    mayor = -99999;
+    for (i = 0; i < tab.length; i++) {
+        if (tab[i] == mayor) {
+            mayor = tab[i] ;
+        }
+    }
+
+    return mayor;
+}
+
+result =  Mayor(tab);
+alert("El valor mayor es " + result);
+
+</script>
+</body>
+</html>
+
