@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Empleado con Mayor Sueldo</title>
+</head>
+<body>
+
+<script>
+
+// Declarar dos arrays, uno con los nombres de los empleados y otro con los sueldos correspondientes
+
+
+    var nombres = ['Juan', 'Maria', 'Carlos', 'Laura'];
+    var sueldos = [2000, 2500, 1800, 3000];
+
+    // ---------FUNCIONES---------
+
+    function Visualizar(nombres, sueldos){
+        let mayor_sueldo=0;
+        for (let i = 0; i < sueldos.length; i++) {
+            if (sueldos[i] > mayor_sueldo) {
+                mayor_sueldo = sueldos[i];
+                mayor_posicion = i;
+            }
+        }
+
+        return mayor_posicion;
+    }
+
+    function Visualizar(pos, nombres, sueldos){
+        document.write(nombres[pos]+ " con "+ sueldos[pos] ) ;
+    }
+
+
+    // ------------PROGRAMA PRINCIPAL-------------
+
+    result = Proceso (nombres, sueldos)
+
+    Visualizar (result, nombres, sueldos); 
+
+</script>
+</body>
+</html>
