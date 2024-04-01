@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+<p id="demo"></p>
+
+
+<script>
+
+let text = '{"tabla_alumnos":[{"nombre": "Luis Ortiz", "notas":[6,4,3,6,2]},{"nombre": "Ana Torres", "notas":[7,5,5,8,9]},{"nombre": "Roberto Martinez", "notas":[3,5,4,5,5,6]},{"nombre": "Laura Moreno", "notas":[5,8,8,5,5]}]}';
+
+function Visualizar1 (lista){
+
+	for (var i=0; i < lista.length; i++){	 
+
+		let suma=0;
+
+		for (var k=0; k < lista[i]['notas'].length; k++){
+			suma += lista[i]['notas'][k];
+		}
+
+		let media = suma / lista[i]['notas'].length;
+
+		if (media < 5){
+			document.write("<br>"+lista[i]['nombre']+": ");
+		    document.write(media);
+		}
+	}
+}
+
+function Obtener_lista (lista){
+
+	let tabla=[];
+	for (let i=0; i < lista.length; i++){
+
+		conta =0;
+
+		for (let k=0; k < lista[i]['notas'].length; k++){
+
+				if (lista[i]['notas'][k] < 5){
+					conta += 1;
+				}
+		}
+
+		if (conta > 2){
+			tabla.push(lista[i]['nombre']);
+		}
+	}
+
+	return tabla;
+
+}
+
+
+function Visualizar2(tabla){
+
+	document.write("<br>"+"Alumnos con mas de dos suspensos"+"<br>");
+	for (let i=0; i < tabla.length; i++){
+		document.write(tabla[i]+"<br>");
+	}
+}
+
+// -------------------------- PROGRAMA PRINCIPAL ------------
+
+const obj = JSON.parse(text);
+
+
+Visualizar1 (obj.tabla_alumnos);
+
+tabla_resultado = Obtener_lista(obj.tabla_alumnos);
+
+Visualizar2(tabla_resultado);
+
+</script>
+</body>
+</html>

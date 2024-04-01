@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>1. JSON</h2>
+<p id="demo"></p>
+
+<script>
+
+    let text = '{"alumnos": [{nombre":"Laura", "notas":[3,5,8,2,6]}, {nombre":"Juan", "notas":[9,5,2,8,2]}, {nombre":"Pepe", "notas":[6,2,5,7,1]} }'
+
+    const obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML = obj.alumnos['nombre'] +" con "+ 
+    obj.alumnos['notas'][2];
+
+</script>
+
+</body>
+</html>
