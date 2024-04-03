@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calcular Media de Dos Números</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<label for="num1">Número 1:</label>
+<input type="number" id="num1" name="num1"><br><br>
+
+<label for="num2">Número 2:</label>
+<input type="number" id="num2" name="num2"><br><br>
+
+<button id="calcular">Calcular Media</button><br><br>
+
+<script>
+    
+    $(document).ready(function() {
+        $("#calcular").click(function() {
+            var num1 = parseFloat($("#num1").val());
+            var num2 = parseFloat($("#num2").val());
+            Media(num1, num2)
+        });
+
+        function Media(num1, num2){
+            var result = (num1 + num2) / 2;
+            alert("La media de " + num1 + " y " + num2 + " es: " + result);
+        } ;
+
+    });
+
+</script>
+</body>
+</html>

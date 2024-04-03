@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Calcular Media del Alumno</title>
+</head>
+<body>
+
+<p id="resultado"></p>
+
+<script>
+
+// Declarar un objeto json que contenga el nombre de un alumno y sus 2 notas. Como nota1 y nota 2
+// Se pide la media del alumno. VIsualizarla junto con el nombre 
+
+    let alumno = '{"nombre": "Juan", "nota1": 3, "nota2": 5}';
+    const obj = JSON.parse(alumno);
+    
+    document.getElementById("resultado").innerHTML = obj.alumno["nombre"] +" con "+ obj.alumno["nota1"], obj.alumno["nota2"] ;
+
+    function Media(nota1, nota2){
+        var media = (nota1 + nota2) / 2;
+        return media;
+    }
+
+</script>
+</body>
+</html>
